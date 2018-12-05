@@ -1,0 +1,44 @@
+{
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "analyze": "cross-env ANALYZE=true npm run build",
+    "test": "react-app-rewired test --env=jsdom",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "dependencies": {
+    "@reach/router": "^1.1.1",
+    "@rematch/core": "^1.0.0-beta.4",
+    "axios": "^0.18.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-helmet-async": "^0.1.0-alpha",
+    "react-hot-loader": "^4.3.4",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^5.0.7",
+    "sanitize.css": "^6.0.0",
+    "styled-components": "^3.4.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^3.4.10",
+    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-backgrounds": "^3.4.10",
+    "@storybook/addon-info": "^3.4.10",
+    "@storybook/react": "^4.0.0-alpha.16",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "react-app-rewire-hot-loader": "^1.0.1",
+    "react-app-rewire-imagemin-plugin": "^1.0.1",
+    "react-app-rewire-styled-components": "^3.0.2",
+    "react-app-rewire-svgr": "^1.1.1",
+    "react-app-rewire-webpack-bundle-analyzer": "^1.0.1",
+    "react-app-rewired": "^1.5.2",
+    "react-scripts": "^1.1.4",
+    "style-loader": "^0.22.1",
+    "url-loader": "^1.1.1"
+  }
+}
