@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'PTSans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PT Sans'), url('../fonts/pt-sans/PTS55F.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PTSans Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PTSans Bold'),
+    url('../fonts/pt-sans/PTS75F.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Intro";
+  src: url("../fonts/intro/Intro.otf") format("truetype");
+}
