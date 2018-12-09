@@ -11,6 +11,8 @@ import createStore from './createStore';
 import registerServiceWorker from './registerServiceWorker';
 import { theme } from './globalStyles';
 
+import './assets/styles/styles.scss';
+
 export const { store, dispatch } = createStore();
 
 const MOUNT_NODE = document.getElementById('root');
