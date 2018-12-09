@@ -4,6 +4,7 @@ const rewireStyledComponents = require('react-app-rewire-styled-components');
 const rewireWebpackBundleAnalyzer = require('react-app-rewire-webpack-bundle-analyzer');
 const rewireImageminPlugin = require('react-app-rewire-imagemin-plugin');
 const rewireSVGR = require('react-app-rewire-svgr');
+const rewireSass = require('react-app-rewire-scss');
 
 module.exports = (config, env) => {
   if (process.env.NODE_ENV === 'development') {
@@ -37,6 +38,8 @@ module.exports = (config, env) => {
   config = rewireStyledComponents(config, env);
 
   config = rewireSVGR(config, env);
+
+  config = rewireSass(config, env);
 
   config.resolve.alias = {
     ...config.resolve.alias,
