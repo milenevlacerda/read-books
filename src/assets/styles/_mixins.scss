@@ -1,0 +1,29 @@
+
+@mixin font($family, $size, $bold) {
+  font-family: $family;
+
+  @if ($size > 0) {
+    font-size: $size;
+  }
+
+  @if ($bold) {
+    font-weight: 600;
+  }
+
+  @else {
+    font-weight: 300;
+  }
+}
+
+@mixin titleBorder($color) {
+  border-bottom: 5px solid $color;
+  position: absolute;
+  top: 44px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: 900px) {
+    top: 46px;
+  }
+}
