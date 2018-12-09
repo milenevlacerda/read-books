@@ -1,0 +1,15 @@
+// General
+
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+
+// Components
+
+@import 'components/Card/style.scss';
+@import 'components/Header/style.scss';
+@import 'components/Footer/style.scss';
+@import 'components/CardExpanded/style.scss';
+@import 'components/BackButton/style.scss';
