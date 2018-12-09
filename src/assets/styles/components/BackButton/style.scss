@@ -1,0 +1,14 @@
+.back-button {
+  @include font("Intro", 14, false);
+
+  outline: none;
+  margin: 32px 0 0 0;
+  font-size: 14px;
+  background: $second-color;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  padding: 15px 25px 15px 14px;
+  border-radius: 4px;
+  box-shadow: 0px 6px 19px rgba(0, 0, 0, 0.2);
+}
