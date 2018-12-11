@@ -10,7 +10,7 @@ export default function({ book }) {
       <div className="card-expanded-box">
         <div className="card-expanded">
           <div className="card-header">
-            <img className="book-image" src={CapaLivro} alt="" />
+            <img className="book-image" src={book.cover.url} alt="" />
           </div>
 
           <div className="card-content">
@@ -18,37 +18,33 @@ export default function({ book }) {
 
             <div className="book-details">
               <p className="card-description">
-                <strong className="description-item">Autora </strong>
-                Keren Dionne
+                <strong className="description-item">Autor </strong>
+                <p>{book.author}</p>
             </p>
               <p className="card-description">
                 <strong className="description-item">Edição </strong>
-                08/2018
+                <p>{book.edition}</p>
             </p>
               <p className="card-description">
                 <strong className="description-item">Curador </strong>
-                Milene V. Lacerda
+                <p>{book.curator}</p>
             </p>
               <p className="card-description">
                 <strong className="description-item">Nº de Páginas </strong>
-                240 Páginas
+                <p>{book.pages} Páginas</p>
             </p>
-              <p className="card-description">
-                <strong className="description-item">Nº de Páginas </strong>
-                240 Páginas
-            </p>
-              <p className="card-description">
+            <p className="card-description">
                 <strong className="description-item">
                   Nº de Avaliações TAG{' '}
                 </strong>
-                40 Avaliações
+                <p>{book.totalRatings} Avaliações</p>
             </p>
-              <p className="card-description">
+            {book.goodreads ? <p className="card-description">
                 <strong className="description-item">
                   Nº de Avaliações GoodReads{' '}
                 </strong>
-                30 Avaliações
-            </p>
+                <p>{book.goodreads.ratings_count}</p> Avaliações
+            </p> : null}
             </div>
 
             <div className="rating-box">
@@ -66,11 +62,11 @@ export default function({ book }) {
                 <img className="rating" src={Rating} alt="" />
               </div>
 
-              <div className="box">
+              {book.goodreads ? <div className="box">
                 <img src={LogoGoodReads} alt="" className="logo" />
                 <span className="grade">5,0</span>
                 <img className="rating" src={Rating} alt="" />
-              </div>
+              </div> : null}
             </div>
           </div>
         </div>
