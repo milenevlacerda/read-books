@@ -3,12 +3,10 @@ import CapaLivro from '@/assets/images/2018.10-aberto-ineditos.jpg';
 import LogoTag from '@/assets/images/logo.png';
 import LogoGoodReads from '@/assets/images/goodreads.png';
 import Rating from '@/assets/images/rating.png';
-import BackButton from '../BackButton/index';
 
-export default function() {
+export default function({ book }) {
   return (
     <div>
-      <BackButton />
       <div className="card-expanded-box">
         <div className="card-expanded">
           <div className="card-header">
@@ -16,7 +14,7 @@ export default function() {
           </div>
 
           <div className="card-content">
-            <h3 className="card-title">A Filha do Rei do Pântano</h3>
+            <h3 className="card-title">{book.name}</h3>
 
             <div className="book-details">
               <p className="card-description">
