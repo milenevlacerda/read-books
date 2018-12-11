@@ -15,6 +15,8 @@ import './assets/styles/styles.scss';
 
 export const { store, dispatch } = createStore();
 
+dispatch.books.fetch();
+
 const MOUNT_NODE = document.getElementById('root');
 
 function render() {
