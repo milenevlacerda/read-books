@@ -8,6 +8,7 @@ import Header from '@/components/Header';
 import CardExpanded from '@/components/CardExpanded/index';
 import Footer from '@/components/Footer';
 import BackButton from '@/components/BackButton/index';
+import Wrapper from '@/components/Wrapper/index';
 
 function Book({ isbn, books }) {
   return (
@@ -15,8 +16,10 @@ function Book({ isbn, books }) {
       <Header/>
       <Container>
         <Head title="Home" />
-        <BackButton onBack={() => navigate('/')}/>
-        <CardExpanded book={books.find((book) => book.isbn === isbn)}/>
+        <Wrapper>
+          <BackButton onBack={() => navigate('/')} />
+          <CardExpanded book={books.find((book) => book.isbn === isbn)} />
+        </Wrapper>
       </Container>
       <Footer/>
     </div>    
