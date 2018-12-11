@@ -16,7 +16,7 @@ export default function Routes() {
   return (
     <Router>
       <Home path="/" />
-      <Book path="/book"/>
+      <Book path="/book/:isbn"/>
     </Router>
   );
 }
