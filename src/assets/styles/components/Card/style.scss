@@ -1,18 +1,18 @@
 .cards-box {
   padding-bottom: 32px;
+  display: flex;
+  width: 32%;
+  flex-wrap: wrap;
+  margin: 32px 16px 0 0;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 
   .card {
-    margin: 32px 32px 0 0;
     box-shadow: 0px 6px 19px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    width: 37%;
-    text-align: left;
-
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
+    width: 100%;
 
     &-header {
       border-radius: 5px;
@@ -66,6 +66,10 @@
           background: rgba(196, 196, 169, 0.68)
         }
 
+        &:nth-of-type(2) .logo{
+          width: 70px;
+        }
+
         .logo {
           width: 30px;
           height: 22px;
@@ -75,10 +79,6 @@
         &:last-of-type {
           margin-left: 12px;
           width: 50%;
-
-          .logo {
-            width: 70px;
-          }
 
           &::after {
             display: none;
@@ -95,6 +95,16 @@
           width: 65px;
           height: 13px;
           margin: 0 5px;
+          position: relative;
+
+          .stars {
+            width: 100%;
+            position: absolute;
+
+            &:first-child {
+              background-image: url(../images/rating.png);
+            }
+          }
         }
       }
     }
