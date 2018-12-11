@@ -19,6 +19,7 @@ export default {
       });
     }
   },
+
   effects: (dispatch) => ({
     async fetch() {
       const { data: books } = await api.books.all();
@@ -29,14 +30,20 @@ export default {
         dispatch.books.fetchGoodReads(book.isbn);
       });
     },
-    
+
     async fetchGoodReads(isbn) {
-      const { data: goodreadBook } = await api.goodreads.get(isbn);
-      
-      dispatch.books.defineGoodReads({
-        goodreadBook: goodreadBook.book,
-        isbn,
-      });
+      try {
+        const {
+          data: goodreadBook
+        } = await api.goodreads.get(isbn);
+
+        dispatch.books.defineGoodReads({
+          goodreadBook: goodreadBook.book,
+          isbn,
+        });
+      } catch (error) {
+        console.log(`livro ${isbn} não encontrado no Goodreads`);
+      }
     }
   })
 }
