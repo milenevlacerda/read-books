@@ -1,8 +1,7 @@
 import React from 'react';
-import CapaLivro from '@/assets/images/2018.10-aberto-ineditos.jpg';
 import LogoTag from '@/assets/images/logo.png';
 import LogoGoodReads from '@/assets/images/goodreads.png';
-import Rating from '@/assets/images/rating.png';
+import ReactStars from 'react-stars'
 
 export default function({ book }) {
   return (
@@ -58,14 +57,26 @@ export default function({ book }) {
             <div className="evaluation-box">
               <div className="box">
                 <img src={LogoTag} alt="" className="logo" />
-                <span className="grade">5,0</span>
-                <img className="rating" src={Rating} alt="" />
+                <span className="grade">{(book.totalRatings / book.numRatings).toFixed(1)}</span>
+                <div className="rating">
+                  <ReactStars
+                      count={5}
+                      size="24"
+                      value={Math.floor((book.totalRatings / book.numRatings))}
+                      edit={false} />
+                </div>
               </div>
 
               {book.goodreads ? <div className="box">
                 <img src={LogoGoodReads} alt="" className="logo" />
-                <span className="grade">5,0</span>
-                <img className="rating" src={Rating} alt="" />
+                <span className="grade">{Number(book.goodreads.average_rating).toFixed(1)}</span>
+                <div className="rating">
+                  <ReactStars
+                      count={5}
+                      size="24"
+                      value={Math.floor(Number(book.goodreads.average_rating))}
+                      edit={false} />
+                </div>
               </div> : null}
             </div>
           </div>

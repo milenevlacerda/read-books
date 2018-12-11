@@ -1,8 +1,8 @@
 import React from 'react';
 import LogoTag from '@/assets/images/logo.png';
 import LogoGoodReads from '@/assets/images/goodreads.png';
-import Rating from '@/assets/images/rating.png';
-import RatingColored from '@/assets/images/rating-colored.png';
+import ReactStars from 'react-stars'
+
 
 export default function({ book, onClick }) {
   return <div className="cards-box" onClick={() => onClick(book.isbn)}>
@@ -27,10 +27,10 @@ export default function({ book, onClick }) {
                 {(book.totalRatings / book.numRatings).toFixed(1)}
               </span>
               <div className="rating">
-                <div className="stars"></div>
-                <div className="stars"></div>
-                {/* <img src={Rating} alt="" /> */}
-                {/* <img src={RatingColored} alt="" width={`${((book.totalRatings / book.numRatings) * 100) / 5}%`} /> */}
+                <ReactStars
+                  count={5}
+                  value={Math.floor((book.totalRatings / book.numRatings))}
+                  edit={false} />
               </div>
             </div>
             {book.goodreads ? <div className="box">
@@ -39,7 +39,12 @@ export default function({ book, onClick }) {
                 <span className="grade">
                   {Number(book.goodreads.average_rating).toFixed(1)}
                 </span>
-                <img className="rating" src={Rating} alt="" />
+                <div className="rating">
+                  <ReactStars
+                      count={5}
+                      value={Math.floor(Number(book.goodreads.average_rating))}
+                      edit={false} />
+                </div>
               </div> : null}
           </div>
         </div>
