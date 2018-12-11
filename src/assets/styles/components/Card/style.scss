@@ -55,7 +55,7 @@
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
-        width: 39%;
+        width: 42%;
 
         &::after {
           content: '';
@@ -78,11 +78,15 @@
 
         &:last-of-type {
           margin-left: 12px;
-          width: 50%;
+          width: 53%;
 
           &::after {
             display: none;
           }
+        }
+
+        &:first-of-type {
+          margin-left: 0;
         }
 
         .grade {
@@ -92,7 +96,7 @@
         }
 
         .rating {
-          width: 65px;
+          width: 75px;
           height: 13px;
           margin: 0 5px;
           position: relative;
@@ -100,10 +104,6 @@
           .stars {
             width: 100%;
             position: absolute;
-
-            &:first-child {
-              background-image: url(../images/rating.png);
-            }
           }
         }
       }
