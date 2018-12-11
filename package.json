@@ -7,12 +7,16 @@
     "analyze": "cross-env ANALYZE=true npm run build",
     "test": "react-app-rewired test --env=jsdom",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "server-api": "node server.js"
   },
   "dependencies": {
     "@reach/router": "^1.1.1",
     "@rematch/core": "^1.0.0-beta.4",
     "axios": "^0.18.0",
+    "express": "^4.16.2",
+    "goodreads-json-api": "^1.0.4",
+    "node-fetch": "^1.7.3",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -31,6 +35,7 @@
     "@storybook/react": "^4.0.0-alpha.16",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
+    "json-server": "^0.14.0",
     "react-app-rewire-hot-loader": "^1.0.1",
     "react-app-rewire-imagemin-plugin": "^1.0.1",
     "react-app-rewire-scss": "^1.0.2",
