@@ -5,17 +5,17 @@ import Container from '@/components/Container';
 
 export default function () {
   return ( 
-    <footer class="footer">
+    <footer className="footer">
       <Container>
-        <div class="footer-logo">
+        <div className="footer-logo">
           <img src={Logo} alt="" />
         </div>
 
-        <div class="footer-phrase">
+        <div className="footer-phrase">
           <strong>TAG</strong> Livros
         </div>
 
-        <div class="footer-top">
+        <div className="footer-top">
           <img src={BackToTop} alt="" className="back-to-top"/>
         </div>
       </Container>
