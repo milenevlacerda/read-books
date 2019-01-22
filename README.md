@@ -14,9 +14,9 @@ Visando uma melhor arquitetura, juntamente com uma boa linguagem, optei por arqu
 
 Vindo de Higher-Order Functions (uma função que opera sobre outras funções), o Higher-Order Components tem como base componentes que operam sobre outros componentes, removendo a complexidade de estrutura, organização, interação e dependências entre componentes e responsabilidades dos mesmos.
 
-Em camadas diferentes, a aplicação front-end se comunica com a API através de dois services, um disponibilizado pela própia TAG, (*server.js* rodando em cima de *livros.json*), e outro estruturado e desenvolvido por mim, responsável por consultar a API do GoodReads, assim estabelecer a conexão entre as mesmas e a aplicação e obter dela o necessário para ser exibido no front-end.
+Em camadas diferentes, a aplicação front-end se comunica com a API através de dois services, um disponibilizado pela própria TAG, (*server.js* rodando em cima de *livros.json*), e outro estruturado e desenvolvido por mim, responsável por consultar a API do GoodReads, assim estabelecer a conexão entre as mesmas e a aplicação e obter dela o necessário para ser exibido no front-end.
 
-Como sugestão de melhora para o teste, deixo como intensão a aplicação de testes unitários para garantir que sejam obtidas as funcionalidades esperadas em cada parte do código, a aplicação de layout resposivo ou adaptativo,serviço de busca e carregamento de mais livos.
+Como sugestão de melhora para o teste, deixo como intensão a aplicação de testes unitários para garantir que sejam obtidas as funcionalidades esperadas em cada parte do código, a aplicação de layout resposivo ou adaptativo, serviço de busca e carregamento de mais livos.
 
 A aplicação está estruturada da seguinte forma:
 
@@ -59,7 +59,7 @@ Uso de scripts, linters e ferramentas de build para apoio ao desenvolvimento.
 
 Para o apoio ao desenvolvimento foi utilizado **Reactjs**, com o uso do *boilerplate* [React Etalpreliob](https://github.com/hyanmandian/react-etalpreliob), que consiste basicamente em uma estrutura baseada no *create-react-app* (tudo o que funciona com o create-react-app funciona com este boilerplate também), além de muitas coisas úteis que normalmente precisamos durante o desenvolvimento, como:
 
-[Axios]() - Cliente para requisições HTTP
+[Axios](https://github.com/axios/axios) - Cliente para requisições HTTP
 [Rewired](https://github.com/timarney/react-app-rewired) - Ajusta a(s) configuração(ões) webpack do create-react-app sem usar 'eject' e sem criar uma bifurcação dos scripts-reag.
 [Rematch](https://github.com/rematch/rematch) - Framework em cima do Redux para a utiliação da arquitetura flux.
 [Storybook](https://github.com/storybooks/storybook) - Storybook é um ambiente de desenvolvimento para componentes de interface do usuário. Ele permite que você navegue por uma biblioteca de componentes, visualize os diferentes estados de cada componente e desenvolva e teste componentes interativamente.
@@ -76,7 +76,7 @@ No geral foram utilizadas boas práticas de Clean Code, procurando sempre deixar
 
 ## Sobre a UI prototipada e desenvolvida
 
-Com base em skill de UX e UI Designer que obtenho, foi prototipada telas para guia de implementação do webapp.
+Com base em skill de UX e UI Designer que obtenho, foi prototipada telas de baixa fidelidade para guia de implementação do webapp.
 Os protótipos foram feitos no [Figma](https://www.figma.com/) e estão disponibilizados juntamente com o projeto, em *assets/uiDesign*
 
 ## URL de publicação
